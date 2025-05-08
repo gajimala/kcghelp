@@ -21,6 +21,6 @@ app.mount("/", StaticFiles(directory="public", html=True), name="static")
 # lifesavers 데이터 제공
 @app.get("/lifesavers")
 def get_lifesavers():
-    with open("public/gangneung_lifesavers.json", encoding="utf-8") as f:
+    with open("public/lifesavers.json", encoding="utf-8") as f:
         data = json.load(f)
     return data
